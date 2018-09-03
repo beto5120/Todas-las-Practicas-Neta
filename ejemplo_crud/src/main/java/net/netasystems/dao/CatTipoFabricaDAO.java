@@ -12,7 +12,7 @@ import java.util.List;
 
 import net.netasystems.domain.CatTipoFabrica;
 
-public class CatTipoFabricaDAO {
+public class CatTipoFabricaDAO { 
 	
 private Connection con;
 	
