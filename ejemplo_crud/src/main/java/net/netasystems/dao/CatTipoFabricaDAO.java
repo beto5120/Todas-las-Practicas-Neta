@@ -12,10 +12,23 @@ import java.util.List;
 
 import net.netasystems.domain.CatTipoFabrica;
 
+/**
+ * @author NetaSystems / Jose Alberto Fuentes Loredo
+ *
+ *En esta clase se hace la conexion a la BD y se realizan los SELECT, UPDATE, INSERT y DELETE
+ */
 public class CatTipoFabricaDAO { 
 	
+/**
+ * Declaracion de variable privada
+ */
 private Connection con;
 	
+	/**
+	 * Conexion para la BD
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public CatTipoFabricaDAO() throws ClassNotFoundException, SQLException {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		con = DriverManager.getConnection(  
@@ -26,6 +39,11 @@ private Connection con;
 		con.close();
 	}
 	
+	/**
+	 * Se realiza un SELECT en la BD 
+	 * @return Retorna la informacion solicitada
+	 * @throws SQLException
+	 */
 	public List<CatTipoFabrica> getAllRecords() throws SQLException{
 		List<CatTipoFabrica> lista = new ArrayList<CatTipoFabrica>();
 		String sql = "select IDCATTIPOFABRICA, NOMBRE, ESTATUS, FECHAMODIFICACION, IDUSUARIO from CAT_TIPO_FABRICA";
@@ -51,6 +69,13 @@ private Connection con;
 		return lista;
 	}
 	
+	/**
+	 * Se realiza un UPDATE en la BD
+	 * 
+	 * @param record
+	 * @return
+	 * @throws SQLException
+	 */
 	public String updateRecord(CatTipoFabrica record) throws SQLException {
 		
 		String sqlupd = "UPDATE CAT_TIPO_FABRICA SET NOMBRE = ? WHERE NOMBRE= ?";
@@ -64,6 +89,12 @@ private Connection con;
 			return sqlupd;
 	}
 	
+	/**
+	 * Se realiza un INSERT en la BD
+	 * 
+	 * @param record
+	 * @throws SQLException
+	 */
 	public void addRecord(CatTipoFabrica record) throws SQLException {
 		
 		String sqladd = "INSERT INTO CAT_TIPO_FABRICA (IDCATTIPOFABRICA, NOMBRE, ESTATUS, FECHAMODIFICACION, IDUSUARIO) VALUES (?,?,?,?,?)";
@@ -80,6 +111,11 @@ private Connection con;
 			pstmadd.close();	
 	}
 	
+	/**
+	 * Se realiza un DELETE en la BD
+	 * 
+	 * @param record
+	 */
 	public void deleteRecord(CatTipoFabrica record) {
 		
 		Statement stmt = con.prepareStatement("DELETE FROM CAT_TIPO_FABRICA");

@@ -6,6 +6,12 @@ import java.util.List;
 import net.netasystems.dao.CatTipoFabricaDAO;
 import net.netasystems.domain.CatTipoFabrica;
 
+/**
+ * @author NetaSystems / Jose Alberto Fuentes Loredo
+ * 
+ * En esta clase se cachan todas la excepciones
+ *
+ */
 public class CatTipoFabricaService {
 
 	private CatTipoFabricaDAO dao;

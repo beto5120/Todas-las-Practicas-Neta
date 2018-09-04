@@ -3,6 +3,12 @@ package net.netasystems.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author NetaSystems / Jose Alberto Fuentes Loredo
+ * 
+ * En esta clase se asignas variables privadas y se generan Getters y Setters
+ *
+ */
 public class CatTipoFabrica implements Serializable {
 	
 	public CatTipoFabrica(long idCatTipoFabrica, String nombre, char status, Date fechaModificacion, long idUsuario) {
@@ -22,34 +28,83 @@ public class CatTipoFabrica implements Serializable {
 	private Character status;
 	private Date fechaModificacion;
 	private Long idUsuario;
-	
+
+	/**
+	 *Obtiene el valor
+	 * @return the idCatTipoFabrica
+	 */
 	public long getIdCatTipoFabrica() {
 		return idCatTipoFabrica;
 	}
+
+	/**
+	 *Asigna el valor 
+	 * @param idCatTipoFabrica the idCatTipoFabrica to set
+	 */
 	public void setIdCatTipoFabrica(long idCatTipoFabrica) {
 		this.idCatTipoFabrica = idCatTipoFabrica;
 	}
+
+	/**
+	 *Obtiene el valor
+	 * @return the nombre
+	 */
 	public String getNombre() {
 		return nombre;
 	}
+
+	/**
+	 *Asigna el valor 
+	 * @param nombre the nombre to set
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+	/**
+	 *Obtiene el valor
+	 * @return the status
+	 */
 	public Character getStatus() {
 		return status;
 	}
+
+	/**
+	 *Asigna el valor 
+	 * @param status the status to set
+	 */
 	public void setStatus(Character status) {
 		this.status = status;
 	}
+
+	/**
+	 *Obtiene el valor
+	 * @return the fechaModificacion
+	 */
 	public Date getFechaModificacion() {
 		return fechaModificacion;
 	}
+
+	/**
+	 *Asigna el valor 
+	 * @param fechaModificacion the fechaModificacion to set
+	 */
 	public void setFechaModificacion(Date fechaModificacion) {
 		this.fechaModificacion = fechaModificacion;
 	}
+
+	/**
+	 *Obtiene el valor
+	 * @return the idUsuario
+	 */
 	public Long getIdUsuario() {
 		return idUsuario;
 	}
+
+	/**
+	 *Asigna el valor 
+	 * @param idUsuario the idUsuario to set
+	 */
 	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}

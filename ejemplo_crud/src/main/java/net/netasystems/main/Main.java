@@ -6,6 +6,12 @@ import java.util.List;
 import net.netasystems.domain.CatTipoFabrica;
 import net.netasystems.service.CatTipoFabricaService;
 
+/**
+ * @author NetaSystems / Jose Alberto Fuentes Loredo
+ * 
+ * Esta es la clase que inicia el programa
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) {
